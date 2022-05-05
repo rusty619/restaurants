@@ -8,7 +8,7 @@ class Restaurant < ActiveRecord::Base
 
     def all_reviews 
         return self.reviews.map do |review| 
-            "Review for #{review.restaurant.name} by #{review.customer.full_name}: #{review.star_rating} stars."
+           review.full_review #"Review for #{review.restaurant.name} by #{review.customer.full_name}: #{review.star_rating} stars."
         end
     end
 end
